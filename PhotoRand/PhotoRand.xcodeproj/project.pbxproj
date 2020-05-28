@@ -14,6 +14,8 @@
 		3F347884247F97DA007E6D0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F347883247F97DA007E6D0C /* Preview Assets.xcassets */; };
 		3F347887247F97DA007E6D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F347885247F97DA007E6D0C /* LaunchScreen.storyboard */; };
 		3F347892247F97DA007E6D0C /* PhotoRandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F347891247F97DA007E6D0C /* PhotoRandTests.swift */; };
+		3FED1DD9247FE56C00E33B20 /* PhotoRandCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FED1DD8247FE56C00E33B20 /* PhotoRandCore.framework */; };
+		3FED1DDA247FE56C00E33B20 /* PhotoRandCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FED1DD8247FE56C00E33B20 /* PhotoRandCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 			remoteInfo = PhotoRand;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3FED1DDB247FE56C00E33B20 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FED1DDA247FE56C00E33B20 /* PhotoRandCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F347877247F97D8007E6D0C /* PhotoRand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoRand.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +54,7 @@
 		3F34788D247F97DA007E6D0C /* PhotoRandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoRandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F347891247F97DA007E6D0C /* PhotoRandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRandTests.swift; sourceTree = "<group>"; };
 		3F347893247F97DA007E6D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FED1DD8247FE56C00E33B20 /* PhotoRandCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PhotoRandCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FED1DD9247FE56C00E33B20 /* PhotoRandCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +82,7 @@
 				3F347879247F97D8007E6D0C /* PhotoRand */,
 				3F347890247F97DA007E6D0C /* PhotoRandTests */,
 				3F347878247F97D8007E6D0C /* Products */,
+				3FED1DD7247FE56C00E33B20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +166,14 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
+		3FED1DD7247FE56C00E33B20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FED1DD8247FE56C00E33B20 /* PhotoRandCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +184,7 @@
 				3F347873247F97D8007E6D0C /* Sources */,
 				3F347874247F97D8007E6D0C /* Frameworks */,
 				3F347875247F97D8007E6D0C /* Resources */,
+				3FED1DDB247FE56C00E33B20 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
