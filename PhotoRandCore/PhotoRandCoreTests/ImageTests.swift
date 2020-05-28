@@ -103,4 +103,29 @@ class ImageTests: XCTestCase {
         
         XCTAssertTrue(images.count == 4)
     }
+    
+    func testInitializeWithDefaultInitializer() throws {
+        let id = "1006"
+        let author = "Vladimir Kudinov"
+        let width = 3000
+        let height = 2000
+        let downloadURL = "https://picsum.photos/id/1006/3000/2000"
+        let dataStatus = Image.DataStatus.downloaded
+        
+        let image = Image(
+            id: id,
+            author: author,
+            width: width,
+            height: height,
+            downloadURL: downloadURL,
+            dataStatus: dataStatus
+        )
+        
+        XCTAssert(image.id == "1006")
+        XCTAssert(image.author == "Vladimir Kudinov")
+        XCTAssert(image.width == 3000)
+        XCTAssert(image.height == 2000)
+        XCTAssert(image.downloadURL == "https://picsum.photos/id/1006/3000/2000")
+        XCTAssert(image.dataStatus == Image.DataStatus.downloaded)
+    }
 }

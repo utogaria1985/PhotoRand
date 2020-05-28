@@ -11,6 +11,11 @@
 		3FED1DB7247FE34100E33B20 /* PhotoRandCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DE6247FE8A100E33B20 /* Image.swift */; };
 		3FED1DED247FECF800E33B20 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DEC247FECF800E33B20 /* ImageTests.swift */; };
+		3FED1DF5247FF5AB00E33B20 /* PicsumImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DF1247FF5AA00E33B20 /* PicsumImageService.swift */; };
+		3FED1DF6247FF5AB00E33B20 /* ImageListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DF2247FF5AB00E33B20 /* ImageListProvider.swift */; };
+		3FED1DF9247FFEC800E33B20 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DF8247FFEC800E33B20 /* APIProvider.swift */; };
+		3FED1DFB248000B500E33B20 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DFA248000B500E33B20 /* APIService.swift */; };
+		3FED1DFF248003DE00E33B20 /* PicsumImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,11 @@
 		3FED1DB6247FE34100E33B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FED1DE6247FE8A100E33B20 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3FED1DEC247FECF800E33B20 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
+		3FED1DF1247FF5AA00E33B20 /* PicsumImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicsumImageService.swift; sourceTree = "<group>"; };
+		3FED1DF2247FF5AB00E33B20 /* ImageListProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListProvider.swift; sourceTree = "<group>"; };
+		3FED1DF8247FFEC800E33B20 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		3FED1DFA248000B500E33B20 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumImageServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				3FED1DE5247FE89600E33B20 /* Models */,
+				3FED1DEE247FF57300E33B20 /* ImageListProvider */,
+				3FED1DF7247FFEB400E33B20 /* API */,
 				3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */,
 				3FED1DAA247FE34100E33B20 /* Info.plist */,
 			);
@@ -83,8 +95,9 @@
 		3FED1DB3247FE34100E33B20 /* PhotoRandCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FED1DEC247FECF800E33B20 /* ImageTests.swift */,
 				3FED1DB6247FE34100E33B20 /* Info.plist */,
+				3FED1DEC247FECF800E33B20 /* ImageTests.swift */,
+				3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */,
 			);
 			path = PhotoRandCoreTests;
 			sourceTree = "<group>";
@@ -95,6 +108,24 @@
 				3FED1DE6247FE8A100E33B20 /* Image.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3FED1DEE247FF57300E33B20 /* ImageListProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3FED1DF2247FF5AB00E33B20 /* ImageListProvider.swift */,
+				3FED1DF1247FF5AA00E33B20 /* PicsumImageService.swift */,
+			);
+			path = ImageListProvider;
+			sourceTree = "<group>";
+		};
+		3FED1DF7247FFEB400E33B20 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3FED1DF8247FFEC800E33B20 /* APIProvider.swift */,
+				3FED1DFA248000B500E33B20 /* APIService.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FED1DFB248000B500E33B20 /* APIService.swift in Sources */,
+				3FED1DF6247FF5AB00E33B20 /* ImageListProvider.swift in Sources */,
 				3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */,
+				3FED1DF5247FF5AB00E33B20 /* PicsumImageService.swift in Sources */,
+				3FED1DF9247FFEC800E33B20 /* APIProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FED1DFF248003DE00E33B20 /* PicsumImageServiceTests.swift in Sources */,
 				3FED1DED247FECF800E33B20 /* ImageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
