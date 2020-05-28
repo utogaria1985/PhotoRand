@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3FED1DB0247FE34100E33B20 /* PhotoRandCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FED1DA6247FE34100E33B20 /* PhotoRandCore.framework */; };
-		3FED1DB5247FE34100E33B20 /* PhotoRandCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DB4247FE34100E33B20 /* PhotoRandCoreTests.swift */; };
 		3FED1DB7247FE34100E33B20 /* PhotoRandCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DE6247FE8A100E33B20 /* Image.swift */; };
+		3FED1DED247FECF800E33B20 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DEC247FECF800E33B20 /* ImageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,9 @@
 		3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoRandCore.h; sourceTree = "<group>"; };
 		3FED1DAA247FE34100E33B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FED1DAF247FE34100E33B20 /* PhotoRandCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoRandCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FED1DB4247FE34100E33B20 /* PhotoRandCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRandCoreTests.swift; sourceTree = "<group>"; };
 		3FED1DB6247FE34100E33B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FED1DE6247FE8A100E33B20 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		3FED1DEC247FECF800E33B20 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		3FED1DA8247FE34100E33B20 /* PhotoRandCore */ = {
 			isa = PBXGroup;
 			children = (
+				3FED1DE5247FE89600E33B20 /* Models */,
 				3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */,
 				3FED1DAA247FE34100E33B20 /* Info.plist */,
 			);
@@ -80,10 +83,18 @@
 		3FED1DB3247FE34100E33B20 /* PhotoRandCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FED1DB4247FE34100E33B20 /* PhotoRandCoreTests.swift */,
+				3FED1DEC247FECF800E33B20 /* ImageTests.swift */,
 				3FED1DB6247FE34100E33B20 /* Info.plist */,
 			);
 			path = PhotoRandCoreTests;
+			sourceTree = "<group>";
+		};
+		3FED1DE5247FE89600E33B20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FED1DE6247FE8A100E33B20 /* Image.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FED1DB5247FE34100E33B20 /* PhotoRandCoreTests.swift in Sources */,
+				3FED1DED247FECF800E33B20 /* ImageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +404,7 @@
 		3FED1DBE247FE34100E33B20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4B2H8345Y;
 				INFOPLIST_FILE = PhotoRandCoreTests/Info.plist;
@@ -410,6 +423,7 @@
 		3FED1DBF247FE34100E33B20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P4B2H8345Y;
 				INFOPLIST_FILE = PhotoRandCoreTests/Info.plist;
