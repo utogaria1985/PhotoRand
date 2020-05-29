@@ -36,6 +36,33 @@ class ImageTests: XCTestCase {
         XCTAssertEqual(image.downloadURL, "https://picsum.photos/id/1008/5616/3744")
     }
 
+    func testCanInitializeWithJSONPayloadWithSingleImageFromLocallySavedImageListFile() throws {
+        let jsonString =
+        """
+            {
+                "id": "1008",
+                "author": "Benjamin Combs",
+                "width": 5616,
+                "height": 3744,
+                "url": "https://unsplash.com/photos/5L4XAgMSno0",
+                "download_url": "https://picsum.photos/id/1008/5616/3744",
+                "dataStatus": 2,
+            }
+        """
+        let jsonData = jsonString.data(using: .utf8)!
+        guard let image = try? JSONDecoder().decode(Image.self, from: jsonData) else {
+            XCTFail("Can't initialize Image from a given json payload")
+            return
+        }
+        
+        XCTAssertEqual(image.id, "1008")
+        XCTAssertEqual(image.author, "Benjamin Combs")
+        XCTAssertEqual(image.width, 5616)
+        XCTAssertEqual(image.height, 3744)
+        XCTAssertEqual(image.downloadURL, "https://picsum.photos/id/1008/5616/3744")
+        XCTAssertEqual(image.dataStatus, Image.DataStatus.downloaded)
+    }
+
 
     func testFailToIntializeWithUnexpectedJSONPayload() throws {
         // Simulate the case when the "id" key is changed to "ID".
@@ -113,6 +140,7 @@ class ImageTests: XCTestCase {
         let dataStatus = Image.DataStatus.downloaded
         
         let image = Image(
+            index: 1,
             id: id,
             author: author,
             width: width,

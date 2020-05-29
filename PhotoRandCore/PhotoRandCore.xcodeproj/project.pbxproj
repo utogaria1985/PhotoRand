@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F69781424812E50002F4846 /* JSONImageListEndecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69781324812E50002F4846 /* JSONImageListEndecoderTests.swift */; };
+		3F69781724813756002F4846 /* ImageListCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69781624813756002F4846 /* ImageListCodable.swift */; };
+		3F6978192481376E002F4846 /* JSONImageListEndecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6978182481376E002F4846 /* JSONImageListEndecoder.swift */; };
+		3F69781B24814320002F4846 /* FileSystemImageListStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69781A24814320002F4846 /* FileSystemImageListStoreTests.swift */; };
 		3FED1DB0247FE34100E33B20 /* PhotoRandCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FED1DA6247FE34100E33B20 /* PhotoRandCore.framework */; };
 		3FED1DB7247FE34100E33B20 /* PhotoRandCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DE6247FE8A100E33B20 /* Image.swift */; };
@@ -16,6 +20,8 @@
 		3FED1DF9247FFEC800E33B20 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DF8247FFEC800E33B20 /* APIProvider.swift */; };
 		3FED1DFB248000B500E33B20 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DFA248000B500E33B20 /* APIService.swift */; };
 		3FED1DFF248003DE00E33B20 /* PicsumImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */; };
+		3FED1E0524801F2500E33B20 /* LocalImageListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1E0424801F2500E33B20 /* LocalImageListStore.swift */; };
+		3FED1E0724802D3100E33B20 /* FileSystemImageListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FED1E0624802D3100E33B20 /* FileSystemImageListStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F69781324812E50002F4846 /* JSONImageListEndecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONImageListEndecoderTests.swift; sourceTree = "<group>"; };
+		3F69781624813756002F4846 /* ImageListCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCodable.swift; sourceTree = "<group>"; };
+		3F6978182481376E002F4846 /* JSONImageListEndecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONImageListEndecoder.swift; sourceTree = "<group>"; };
+		3F69781A24814320002F4846 /* FileSystemImageListStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemImageListStoreTests.swift; sourceTree = "<group>"; };
 		3FED1DA6247FE34100E33B20 /* PhotoRandCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhotoRandCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoRandCore.h; sourceTree = "<group>"; };
 		3FED1DAA247FE34100E33B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +51,8 @@
 		3FED1DF8247FFEC800E33B20 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		3FED1DFA248000B500E33B20 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumImageServiceTests.swift; sourceTree = "<group>"; };
+		3FED1E0424801F2500E33B20 /* LocalImageListStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalImageListStore.swift; sourceTree = "<group>"; };
+		3FED1E0624802D3100E33B20 /* FileSystemImageListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSystemImageListStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6978152481373A002F4846 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3F69781624813756002F4846 /* ImageListCodable.swift */,
+				3F6978182481376E002F4846 /* JSONImageListEndecoder.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		3FED1D9C247FE34100E33B20 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +107,7 @@
 				3FED1DE5247FE89600E33B20 /* Models */,
 				3FED1DEE247FF57300E33B20 /* ImageListProvider */,
 				3FED1DF7247FFEB400E33B20 /* API */,
+				3F6978152481373A002F4846 /* Utilities */,
 				3FED1DA9247FE34100E33B20 /* PhotoRandCore.h */,
 				3FED1DAA247FE34100E33B20 /* Info.plist */,
 			);
@@ -98,6 +120,8 @@
 				3FED1DB6247FE34100E33B20 /* Info.plist */,
 				3FED1DEC247FECF800E33B20 /* ImageTests.swift */,
 				3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */,
+				3F69781324812E50002F4846 /* JSONImageListEndecoderTests.swift */,
+				3F69781A24814320002F4846 /* FileSystemImageListStoreTests.swift */,
 			);
 			path = PhotoRandCoreTests;
 			sourceTree = "<group>";
@@ -114,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				3FED1DF2247FF5AB00E33B20 /* ImageListProvider.swift */,
+				3FED1E0424801F2500E33B20 /* LocalImageListStore.swift */,
+				3FED1E0624802D3100E33B20 /* FileSystemImageListStore.swift */,
 				3FED1DF1247FF5AA00E33B20 /* PicsumImageService.swift */,
 			);
 			path = ImageListProvider;
@@ -239,9 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FED1DFB248000B500E33B20 /* APIService.swift in Sources */,
+				3FED1E0524801F2500E33B20 /* LocalImageListStore.swift in Sources */,
+				3F69781724813756002F4846 /* ImageListCodable.swift in Sources */,
+				3F6978192481376E002F4846 /* JSONImageListEndecoder.swift in Sources */,
 				3FED1DF6247FF5AB00E33B20 /* ImageListProvider.swift in Sources */,
 				3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */,
 				3FED1DF5247FF5AB00E33B20 /* PicsumImageService.swift in Sources */,
+				3FED1E0724802D3100E33B20 /* FileSystemImageListStore.swift in Sources */,
 				3FED1DF9247FFEC800E33B20 /* APIProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F69781424812E50002F4846 /* JSONImageListEndecoderTests.swift in Sources */,
 				3FED1DFF248003DE00E33B20 /* PicsumImageServiceTests.swift in Sources */,
+				3F69781B24814320002F4846 /* FileSystemImageListStoreTests.swift in Sources */,
 				3FED1DED247FECF800E33B20 /* ImageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
