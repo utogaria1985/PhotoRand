@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F026AB62483DC4700DFAFA5 /* ImageProviderProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F026AB52483DC4700DFAFA5 /* ImageProviderProxy.swift */; };
+		3F026AB82483DCC400DFAFA5 /* ImageProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F026AB72483DCC400DFAFA5 /* ImageProviderFactory.swift */; };
+		3F026ABA2483EB0600DFAFA5 /* OtherUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F026AB92483EB0600DFAFA5 /* OtherUtilities.swift */; };
+		3F026ABE2483EBEC00DFAFA5 /* OtherUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F026ABD2483EBEC00DFAFA5 /* OtherUtilitiesTests.swift */; };
+		3F026AC0248436C800DFAFA5 /* ImageProviderProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F026ABF248436C800DFAFA5 /* ImageProviderProxyTests.swift */; };
 		3F69781424812E50002F4846 /* JSONImageListEndecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69781324812E50002F4846 /* JSONImageListEndecoderTests.swift */; };
 		3F69781724813756002F4846 /* ImageListCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F69781624813756002F4846 /* ImageListCodable.swift */; };
 		3F6978192481376E002F4846 /* JSONImageListEndecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6978182481376E002F4846 /* JSONImageListEndecoder.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F026AB52483DC4700DFAFA5 /* ImageProviderProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProviderProxy.swift; sourceTree = "<group>"; };
+		3F026AB72483DCC400DFAFA5 /* ImageProviderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProviderFactory.swift; sourceTree = "<group>"; };
+		3F026AB92483EB0600DFAFA5 /* OtherUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUtilities.swift; sourceTree = "<group>"; };
+		3F026ABD2483EBEC00DFAFA5 /* OtherUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUtilitiesTests.swift; sourceTree = "<group>"; };
+		3F026ABF248436C800DFAFA5 /* ImageProviderProxyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProviderProxyTests.swift; sourceTree = "<group>"; };
 		3F69781324812E50002F4846 /* JSONImageListEndecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONImageListEndecoderTests.swift; sourceTree = "<group>"; };
 		3F69781624813756002F4846 /* ImageListCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCodable.swift; sourceTree = "<group>"; };
 		3F6978182481376E002F4846 /* JSONImageListEndecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONImageListEndecoder.swift; sourceTree = "<group>"; };
@@ -79,6 +89,7 @@
 			children = (
 				3F69781624813756002F4846 /* ImageListCodable.swift */,
 				3F6978182481376E002F4846 /* JSONImageListEndecoder.swift */,
+				3F026AB92483EB0600DFAFA5 /* OtherUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -122,6 +133,8 @@
 				3FED1DFE248003DE00E33B20 /* PicsumImageServiceTests.swift */,
 				3F69781324812E50002F4846 /* JSONImageListEndecoderTests.swift */,
 				3F69781A24814320002F4846 /* FileSystemImageListStoreTests.swift */,
+				3F026ABD2483EBEC00DFAFA5 /* OtherUtilitiesTests.swift */,
+				3F026ABF248436C800DFAFA5 /* ImageProviderProxyTests.swift */,
 			);
 			path = PhotoRandCoreTests;
 			sourceTree = "<group>";
@@ -137,7 +150,9 @@
 		3FED1DEE247FF57300E33B20 /* ImageListProvider */ = {
 			isa = PBXGroup;
 			children = (
+				3F026AB72483DCC400DFAFA5 /* ImageProviderFactory.swift */,
 				3FED1DF2247FF5AB00E33B20 /* ImageListProvider.swift */,
+				3F026AB52483DC4700DFAFA5 /* ImageProviderProxy.swift */,
 				3FED1E0424801F2500E33B20 /* LocalImageListStore.swift */,
 				3FED1E0624802D3100E33B20 /* FileSystemImageListStore.swift */,
 				3FED1DF1247FF5AA00E33B20 /* PicsumImageService.swift */,
@@ -269,10 +284,13 @@
 				3F69781724813756002F4846 /* ImageListCodable.swift in Sources */,
 				3F6978192481376E002F4846 /* JSONImageListEndecoder.swift in Sources */,
 				3FED1DF6247FF5AB00E33B20 /* ImageListProvider.swift in Sources */,
+				3F026ABA2483EB0600DFAFA5 /* OtherUtilities.swift in Sources */,
 				3FED1DE7247FE8A100E33B20 /* Image.swift in Sources */,
 				3FED1DF5247FF5AB00E33B20 /* PicsumImageService.swift in Sources */,
 				3FED1E0724802D3100E33B20 /* FileSystemImageListStore.swift in Sources */,
 				3FED1DF9247FFEC800E33B20 /* APIProvider.swift in Sources */,
+				3F026AB82483DCC400DFAFA5 /* ImageProviderFactory.swift in Sources */,
+				3F026AB62483DC4700DFAFA5 /* ImageProviderProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F69781424812E50002F4846 /* JSONImageListEndecoderTests.swift in Sources */,
+				3F026AC0248436C800DFAFA5 /* ImageProviderProxyTests.swift in Sources */,
 				3FED1DFF248003DE00E33B20 /* PicsumImageServiceTests.swift in Sources */,
 				3F69781B24814320002F4846 /* FileSystemImageListStoreTests.swift in Sources */,
+				3F026ABE2483EBEC00DFAFA5 /* OtherUtilitiesTests.swift in Sources */,
 				3FED1DED247FECF800E33B20 /* ImageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

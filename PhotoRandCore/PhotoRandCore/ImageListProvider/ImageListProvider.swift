@@ -8,14 +8,31 @@
 
 import Foundation
 
-enum ImageListProviderError: Error {
+public enum ImageListProviderError: Error {
     case failToFetchFromServer
     case failToDecodeData
     case failToReadSavedFileFromLocalFileSystem
     case requiredRangeNotAvailable
+    case other(Error)
 }
 
-protocol ImageListProvider {
+extension ImageListProviderError: Equatable {
+    public static func == (lhs: ImageListProviderError, rhs: ImageListProviderError) -> Bool {
+        switch (lhs, rhs) {
+        case (.failToFetchFromServer, .failToFetchFromServer),
+             (.failToDecodeData, .failToDecodeData),
+             (.failToReadSavedFileFromLocalFileSystem, .failToReadSavedFileFromLocalFileSystem),
+             (.requiredRangeNotAvailable, .requiredRangeNotAvailable):
+            return true
+        case (.other(let leftError), .other(let rightError)):
+            return type(of: leftError) == type(of: rightError)
+        case (_, _):
+            return false
+        }
+    }
+}
+
+public protocol ImageListProvider {
     func images(in page: UInt, limit: UInt, completionHandler: @escaping ((Result<[Image], ImageListProviderError>) -> Void))
     static var defaultPageSize: UInt { get }
 }

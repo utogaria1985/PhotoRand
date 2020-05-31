@@ -22,7 +22,7 @@ class FileSystemImageListStore: LocalImageListStore {
         workingQueue.async {
             do {
                 let images = try self.savedImageList()
-                let sortedImages = self.sortImageListByID(images)
+                let sortedImages = sortImageListByIndexOrID(images)
                 
                 let pagedImages = try self.images(in: page, limit: limit, in: sortedImages)
                 completionHandler(.success(pagedImages))
@@ -35,7 +35,9 @@ class FileSystemImageListStore: LocalImageListStore {
     func saveImages(_ images: [Image], completionHandler: @escaping ((LocalImageListStoreError?) -> Void)) {
         workingQueue.async {
             do {
-                let sortedImages = self.sortImageListByID(images)
+                let existingImages = (try? self.savedImageList()) ?? []
+                let mergedImages = Self.merge(newImages: images, into: existingImages)
+                let sortedImages = sortImageListByIndexOrID(mergedImages)
                 let data = try self.imageListEndecoder.encodeImages(sortedImages)
                 try self.saveImageListData(data)
                 completionHandler(nil)
@@ -66,13 +68,6 @@ extension FileSystemImageListStore {
         return Array(result)
     }
     
-    func sortImageListByID(_ images: [Image]) -> [Image] {
-        let sortedImages = images.sorted { (left, right) -> Bool in
-            return left.id.compare(right.id, options: .numeric) == .orderedAscending
-        }
-        return sortedImages
-    }
-    
     func savedImageList() throws -> [Image] {
         let url = try Self.imageListFileURL()
         let data = try Data(contentsOf: url)
@@ -84,6 +79,13 @@ extension FileSystemImageListStore {
     func saveImageListData(_ data: Data) throws {
         let url = try Self.imageListFileURL()
         try data.write(to: url)
+    }
+    
+    static func merge(newImages: [Image], into savedImages: [Image]) -> [Image] {
+        // TODO: implemented a real efficient merge
+        let images = savedImages + newImages
+        
+        return images
     }
     
     static func imageIndexRange(for page: UInt, limit: UInt) -> ClosedRange<UInt> {

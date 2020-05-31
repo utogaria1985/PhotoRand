@@ -25,7 +25,7 @@ public class Image: Codable {
         case dataStatus = "dataStatus"
     }
     
-    var index: UInt64? = 0
+    var index: UInt64? = nil
     public let id: String
     public let author: String
     public let width: Int
@@ -34,7 +34,7 @@ public class Image: Codable {
     public var dataStatus: DataStatus? = .notDownloaded
     
     init(
-        index: UInt64,
+        index: UInt64?,
         id: String,
         author: String,
         width: Int,
